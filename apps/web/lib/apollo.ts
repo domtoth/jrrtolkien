@@ -1,4 +1,5 @@
-import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+import { ApolloClient } from '@apollo/experimental-nextjs-app-support';
+import { InMemoryCache, HttpLink } from '@apollo/client';
 
 export const makeClient = () => {
   const httpLink = new HttpLink({
