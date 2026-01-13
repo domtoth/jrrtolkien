@@ -1,9 +1,13 @@
 'use client';
 
-import { ApolloProvider } from '@apollo/client';
-import { client } from '@/lib/apollo';
+import { ApolloNextAppProvider } from '@apollo/experimental-nextjs-app-support';
+import { makeClient } from '@/lib/apollo';
 
 export function ApolloWrapper({ children }: { children: React.ReactNode }) {
-  return <ApolloProvider client={client}>{children}</ApolloProvider>;
+  return (
+    <ApolloNextAppProvider makeClient={makeClient}>
+      {children}
+    </ApolloNextAppProvider>
+  );
 }
 

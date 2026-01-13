@@ -11,12 +11,15 @@ importers:
       '@apollo/client':
         specifier: ^4.0.12
         version: 4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
+      '@apollo/experimental-nextjs-app-support':
+        specifier: ^0.14.4
+        version: 0.14.4(@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2))(@types/react@19.2.8)(graphql@16.12.0)(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
       graphql:
         specifier: ^16.12.0
         version: 16.12.0
       next:
         specifier: 16.1.1
-        version: 16.1.1(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -58,6 +61,23 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
+  '@apollo/client-integration-nextjs@0.14.4':
+    resolution: {integrity: sha512-4fXHqP3Nh87PvJ3lOU7i/phFPrcfuhla4lWF0H9zyIm1TJGRMZRfJ/27SU87pb/f0rzGKKPzKH+N8dmKOqY3qQ==}
+    peerDependencies:
+      '@apollo/client': ^4.0.0
+      next: ^15.2.3 || ^16.0.0
+      react: ^19
+      rxjs: ^7.3.0
+
+  '@apollo/client-react-streaming@0.14.4':
+    resolution: {integrity: sha512-4f2aZHLfNBWcBGJYWSVQRJVVJ76qW1cLhDcM6YAKey9At86sHt6QfIkAmmHT0yxgwjPCWQiTIQOPwPcwjSswIQ==}
+    peerDependencies:
+      '@apollo/client': ^4.0.0
+      graphql: ^16 || >=17.0.0-alpha.2
+      react: ^19
+      react-dom: ^19
+      rxjs: ^7.3.0
+
   '@apollo/client@4.0.12':
     resolution: {integrity: sha512-CyDR+2A18TFH08rKvH3DaV63eRE0E4pj34gT8UZIQVP64bRRXnQiYuKTf/c6oJNY8+4FrCrcPwWEldnVbh02bA==}
     peerDependencies:
@@ -76,6 +96,14 @@ packages:
         optional: true
       subscriptions-transport-ws:
         optional: true
+
+  '@apollo/experimental-nextjs-app-support@0.14.4':
+    resolution: {integrity: sha512-EzgqeCg9KLGFWkKPgTORyaruVL4dSIJ3yUAEUJiyqB4Sx3d3NF7XKYZhfvDD5TAVvN9lqoUJyZE2xFXFJ0/9rQ==}
+    peerDependencies:
+      '@apollo/client': ^4.0.0
+      next: ^15.2.3
+      react: ^19
+      rxjs: ^7.3.0
 
   '@babel/code-frame@7.28.6':
     resolution: {integrity: sha512-JYgintcMjRiCvS8mMECzaEn+m3PfoQiyqukOMCCVQtoJGYJw8j/8LBJEiqkHLkfwCcs74E3pbAUFNg7d9VNJ+Q==}
@@ -2108,6 +2136,30 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
+  '@apollo/client-integration-nextjs@0.14.4(@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2))(@types/react@19.2.8)(graphql@16.12.0)(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)':
+    dependencies:
+      '@apollo/client': 4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
+      '@apollo/client-react-streaming': 0.14.4(@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2))(@types/react@19.2.8)(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
+      next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      rxjs: 7.8.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - graphql
+      - react-dom
+
+  '@apollo/client-react-streaming@0.14.4(@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2))(@types/react@19.2.8)(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)':
+    dependencies:
+      '@apollo/client': 4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
+      '@types/react-dom': 19.2.3(@types/react@19.2.8)
+      '@wry/equality': 0.5.7
+      graphql: 16.12.0
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      rxjs: 7.8.2
+    transitivePeerDependencies:
+      - '@types/react'
+
   '@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)':
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.12.0)
@@ -2122,6 +2174,18 @@ snapshots:
     optionalDependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
+
+  '@apollo/experimental-nextjs-app-support@0.14.4(@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2))(@types/react@19.2.8)(graphql@16.12.0)(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)':
+    dependencies:
+      '@apollo/client': 4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
+      '@apollo/client-integration-nextjs': 0.14.4(@apollo/client@4.0.12(graphql@16.12.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2))(@types/react@19.2.8)(graphql@16.12.0)(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rxjs@7.8.2)
+      next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      rxjs: 7.8.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - graphql
+      - react-dom
 
   '@babel/code-frame@7.28.6':
     dependencies:
@@ -3823,7 +3887,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next@16.1.1(@babel/core@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@next/env': 16.1.1
       '@swc/helpers': 0.5.15
@@ -3832,7 +3896,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      styled-jsx: 5.1.6(@babel/core@7.28.6)(react@19.2.3)
+      styled-jsx: 5.1.6(react@19.2.3)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.1.1
       '@next/swc-darwin-x64': 16.1.1
@@ -4208,12 +4272,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.6(@babel/core@7.28.6)(react@19.2.3):
+  styled-jsx@5.1.6(react@19.2.3):
     dependencies:
       client-only: 0.0.1
       react: 19.2.3
-    optionalDependencies:
-      '@babel/core': 7.28.6
 
   supports-color@7.2.0:
     dependencies:
