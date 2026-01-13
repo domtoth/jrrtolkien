@@ -177,7 +177,11 @@ export class Neo4jQueries {
     `;
 
     try {
-      const result = await this.client.executeRead(fallbackQuery, { slug, depth });
+      // Ensure depth is an integer for Neo4j
+      const result = await this.client.executeRead(fallbackQuery, { 
+        slug, 
+        depth: Math.floor(depth) 
+      });
       if (result.records.length === 0) return { nodes: [], edges: [] };
 
       const record = result.records[0];
@@ -226,7 +230,11 @@ export class Neo4jQueries {
     `;
 
     try {
-      const result = await this.client.executeRead(fallbackQuery, { query, limit });
+      // Ensure limit is an integer for Neo4j
+      const result = await this.client.executeRead(fallbackQuery, { 
+        query, 
+        limit: Math.floor(limit) 
+      });
       return result.records.map((record) => {
         const node = record.get('node');
         const score = record.get('score');
@@ -259,7 +267,11 @@ export class Neo4jQueries {
       LIMIT $limit
     `;
 
-    const result = await this.client.executeRead(query, { type, limit });
+    // Ensure limit is an integer for Neo4j
+    const result = await this.client.executeRead(query, { 
+      type, 
+      limit: Math.floor(limit) 
+    });
     return result.records.map((record) => {
       const node = record.get('e');
       return {
