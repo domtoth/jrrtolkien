@@ -55,13 +55,13 @@ ArdaGraph/
    ```
 
 2. **Install dependencies**
-   ```bash
-   pnpm install
+```bash
+pnpm install
    ```
 
 3. **Set up environment variables**
    ```bash
-   cp .env.example .env
+cp .env.example .env
    ```
    
    Edit `.env` with your Neo4j credentials:
@@ -90,7 +90,7 @@ ArdaGraph/
    - Start the database
 
 5. **Load seed data**
-   ```bash
+```bash
    pnpm ingest
    ```
    
@@ -108,9 +108,9 @@ ArdaGraph/
    
    **Option A: Start both (recommended)**
    ```bash
-   pnpm dev
-   ```
-   
+pnpm dev
+```
+
    **Option B: Start separately**
    ```bash
    # Terminal 1 - API
@@ -157,8 +157,8 @@ pnpm typecheck        # TypeScript type checking
 
 2. **Re-run ingestion**:
    ```bash
-   pnpm ingest
-   ```
+pnpm ingest
+```
 
 ### GraphQL API
 

@@ -77,12 +77,6 @@ export function SearchBar() {
           ))}
         </div>
       )}
-
-      {isOpen && query.length >= 2 && !loading && results.length === 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 rounded-lg shadow-xl p-4 text-slate-400 z-50">
-          No results found
-        </div>
-      )}
     </div>
   );
 }
