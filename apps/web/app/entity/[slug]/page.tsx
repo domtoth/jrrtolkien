@@ -1,7 +1,7 @@
 'use client';
 
 import { use } from 'react';
-import { useQuery } from '@apollo/client';
+import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 import { GET_ENTITY, GET_ENTITY_GRAPH } from '@/lib/graphql/queries';
 import { EntityWithRelationships, GraphData } from '@/lib/types';
 import { Loading } from '@/app/components/Loading';
@@ -18,19 +18,17 @@ const GraphVisualization = dynamic(() => import('@/app/components/GraphVisualiza
 export default function EntityPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
 
-  const { data, loading, error } = useQuery(GET_ENTITY, {
+  const { data, error } = useSuspenseQuery(GET_ENTITY, {
     variables: { slug },
   });
 
   const {
     data: graphData,
-    loading: graphLoading,
     error: graphError,
-  } = useQuery(GET_ENTITY_GRAPH, {
+  } = useSuspenseQuery(GET_ENTITY_GRAPH, {
     variables: { slug, depth: 1 },
   });
 
-  if (loading) return <Loading />;
   if (error) return <ErrorMessage message={error.message} />;
   if (!data?.entity) return <ErrorMessage message="Entity not found" />;
 
@@ -64,7 +62,7 @@ export default function EntityPage({ params }: { params: Promise<{ slug: string 
       </div>
 
       {/* Graph Visualization */}
-      {graph && !graphLoading && (
+      {graph && (
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Relationship Graph</h2>
           <GraphVisualization data={graph} centerSlug={slug} />

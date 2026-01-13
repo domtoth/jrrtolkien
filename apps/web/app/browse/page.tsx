@@ -1,6 +1,6 @@
 'use client';
 
-import { useQuery } from '@apollo/client';
+import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 import { GET_ENTITIES } from '@/lib/graphql/queries';
 import { Entity, EntityType } from '@/lib/types';
 import { Loading } from '@/app/components/Loading';
@@ -12,11 +12,10 @@ import { useState } from 'react';
 export default function BrowsePage() {
   const [selectedType, setSelectedType] = useState<EntityType | undefined>(undefined);
 
-  const { data, loading, error } = useQuery(GET_ENTITIES, {
+  const { data, error } = useSuspenseQuery(GET_ENTITIES, {
     variables: { type: selectedType, limit: 50 },
   });
 
-  if (loading) return <Loading />;
   if (error) return <ErrorMessage message={error.message} />;
 
   const entities: Entity[] = data?.entities || [];

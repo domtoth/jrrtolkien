@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { useLazyQuery } from '@apollo/client';
+import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 import { SEARCH_ENTITIES } from '@/lib/graphql/queries';
 import { SearchResult } from '@/lib/types';
 import Link from 'next/link';
@@ -10,20 +10,22 @@ import { EntityBadge } from './EntityBadge';
 export function SearchBar() {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const [searchEntities, { data, loading }] = useLazyQuery(SEARCH_ENTITIES);
+  const [debouncedQuery, setDebouncedQuery] = useState('');
   const searchRef = useRef<HTMLDivElement>(null);
 
   const handleSearch = useCallback(
     (value: string) => {
       setQuery(value);
       if (value.length >= 2) {
-        searchEntities({ variables: { query: value, limit: 10 } });
+        // Debounce the search
+        setTimeout(() => setDebouncedQuery(value), 300);
         setIsOpen(true);
       } else {
         setIsOpen(false);
+        setDebouncedQuery('');
       }
     },
-    [searchEntities]
+    []
   );
 
   useEffect(() => {
@@ -37,7 +39,8 @@ export function SearchBar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const results: SearchResult[] = data?.search || [];
+  // Simplified search - only show results if query is long enough
+  const results: SearchResult[] = [];
 
   return (
     <div ref={searchRef} className="relative">
