@@ -1,0 +1,196 @@
+[
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-frodo",
+    "toId": "ent-bilbo",
+    "predicate": "cousin of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-frodo",
+    "toId": "ent-sam",
+    "predicate": "friend of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-frodo",
+    "toId": "ent-ring",
+    "predicate": "bearer of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-gandalf",
+    "toId": "ent-saruman",
+    "predicate": "colleague of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-gandalf",
+    "toId": "ent-frodo",
+    "predicate": "mentor to"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-aragorn",
+    "toId": "ent-gondor",
+    "predicate": "king of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-legolas",
+    "toId": "ent-gimli",
+    "predicate": "friend of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-sauron",
+    "toId": "ent-ring",
+    "predicate": "creator of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-sauron",
+    "toId": "ent-mordor",
+    "predicate": "rules"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-gollum",
+    "toId": "ent-ring",
+    "predicate": "former bearer of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-bilbo",
+    "toId": "ent-shire",
+    "predicate": "resident of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-frodo",
+    "toId": "ent-shire",
+    "predicate": "resident of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-elrond",
+    "toId": "ent-rivendell",
+    "predicate": "lord of"
+  },
+  {
+    "type": "RELATED_TO",
+    "fromId": "ent-mount-doom",
+    "toId": "ent-mordor",
+    "predicate": "located in"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-frodo",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-gandalf",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-gandalf",
+    "toId": "work-hobbit"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-bilbo",
+    "toId": "work-hobbit"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-bilbo",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-aragorn",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-legolas",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-gimli",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-sam",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-gollum",
+    "toId": "work-lotr"
+  },
+  {
+    "type": "APPEARS_IN",
+    "fromId": "ent-gollum",
+    "toId": "work-hobbit"
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-frodo",
+    "toId": "evt-council-elrond",
+    "properties": { "role": "participant" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-gandalf",
+    "toId": "evt-council-elrond",
+    "properties": { "role": "participant" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-aragorn",
+    "toId": "evt-council-elrond",
+    "properties": { "role": "participant" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-elrond",
+    "toId": "evt-council-elrond",
+    "properties": { "role": "host" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-bilbo",
+    "toId": "evt-bilbo-finds-ring",
+    "properties": { "role": "finder" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-frodo",
+    "toId": "evt-destruction-ring",
+    "properties": { "role": "ring-bearer" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-sam",
+    "toId": "evt-destruction-ring",
+    "properties": { "role": "companion" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-gollum",
+    "toId": "evt-destruction-ring",
+    "properties": { "role": "destroyer" }
+  },
+  {
+    "type": "PARTICIPATES_IN",
+    "fromId": "ent-gandalf",
+    "toId": "evt-gandalf-balrog",
+    "properties": { "role": "combatant" }
+  }
+]
+

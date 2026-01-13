@@ -1,0 +1,135 @@
+enum EntityType {
+  CHARACTER
+  PLACE
+  ARTIFACT
+  EVENT
+  GROUP
+}
+
+enum WorkType {
+  NOVEL
+  COLLECTION
+  POETRY
+  ESSAY
+  LETTER
+}
+
+enum EventType {
+  BATTLE
+  COUNCIL
+  JOURNEY
+  BIRTH
+  DEATH
+  MEETING
+  OTHER
+}
+
+enum Age {
+  FA
+  SA
+  TA
+  FO
+  OTHER
+  UNKNOWN
+}
+
+type Entity {
+  id: ID!
+  slug: String!
+  name: String!
+  type: EntityType!
+  summary: String
+  aliases: [String!]
+  relationships: [Relationship!]!
+}
+
+type Relationship {
+  id: String!
+  predicate: String!
+  targetId: String!
+  targetName: String!
+  targetType: EntityType!
+  targetSlug: String!
+}
+
+type Work {
+  id: ID!
+  slug: String!
+  title: String!
+  workType: WorkType!
+  publicationYear: Int
+  summary: String
+  author: String
+}
+
+type TimeRef {
+  id: ID!
+  age: Age!
+  year: Int
+  sortKey: Int!
+  display: String!
+}
+
+type Event {
+  id: ID!
+  slug: String!
+  name: String!
+  eventType: EventType!
+  summary: String
+  timeRef: TimeRef
+}
+
+type SearchResult {
+  id: ID!
+  slug: String!
+  name: String!
+  type: EntityType!
+  snippet: String
+  score: Float
+}
+
+type GraphNode {
+  id: ID!
+  slug: String!
+  name: String!
+  type: EntityType!
+  summary: String
+}
+
+type GraphEdge {
+  id: ID!
+  from: String!
+  to: String!
+  predicate: String!
+  type: String!
+}
+
+type GraphData {
+  nodes: [GraphNode!]!
+  edges: [GraphEdge!]!
+  centerNode: String!
+}
+
+type Query {
+  """Search for entities by name"""
+  search(query: String!, limit: Int): [SearchResult!]!
+  
+  """Get a single entity by slug"""
+  entity(slug: String!): Entity
+  
+  """Get entity neighborhood graph"""
+  entityGraph(slug: String!, depth: Int): GraphData!
+  
+  """Get all entities, optionally filtered by type"""
+  entities(type: EntityType, limit: Int): [Entity!]!
+  
+  """Get a single work by slug"""
+  work(slug: String!): Work
+  
+  """Get all works"""
+  works: [Work!]!
+  
+  """Get all events"""
+  events(limit: Int): [Event!]!
+}
+

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "evt-council-elrond",
+    "slug": "council-of-elrond",
+    "name": "Council of Elrond",
+    "eventType": "COUNCIL",
+    "summary": "A council held in Rivendell to decide the fate of the One Ring.",
+    "timeRef": {
+      "id": "time-ta3018",
+      "age": "TA",
+      "year": 3018,
+      "sortKey": 30018,
+      "display": "TA 3018"
+    }
+  },
+  {
+    "id": "evt-bilbo-finds-ring",
+    "slug": "bilbo-finds-the-ring",
+    "name": "Bilbo Finds the Ring",
+    "eventType": "OTHER",
+    "summary": "Bilbo Baggins discovers the One Ring in Gollum's cave beneath the Misty Mountains.",
+    "timeRef": {
+      "id": "time-ta2941",
+      "age": "TA",
+      "year": 2941,
+      "sortKey": 29041,
+      "display": "TA 2941"
+    }
+  },
+  {
+    "id": "evt-battle-five-armies",
+    "slug": "battle-of-the-five-armies",
+    "name": "Battle of the Five Armies",
+    "eventType": "BATTLE",
+    "summary": "A major battle near the Lonely Mountain involving dwarves, elves, men, goblins, and wargs.",
+    "timeRef": {
+      "id": "time-ta2941-b",
+      "age": "TA",
+      "year": 2941,
+      "sortKey": 29041,
+      "display": "TA 2941"
+    }
+  },
+  {
+    "id": "evt-destruction-ring",
+    "slug": "destruction-of-the-ring",
+    "name": "Destruction of the One Ring",
+    "eventType": "OTHER",
+    "summary": "The One Ring is destroyed in the fires of Mount Doom, ending Sauron's power.",
+    "timeRef": {
+      "id": "time-ta3019",
+      "age": "TA",
+      "year": 3019,
+      "sortKey": 30019,
+      "display": "TA 3019"
+    }
+  },
+  {
+    "id": "evt-battle-helms-deep",
+    "slug": "battle-of-helms-deep",
+    "name": "Battle of Helm's Deep",
+    "eventType": "BATTLE",
+    "summary": "A decisive battle where Rohan defended Helm's Deep against Saruman's forces.",
+    "timeRef": {
+      "id": "time-ta3019-a",
+      "age": "TA",
+      "year": 3019,
+      "sortKey": 30019,
+      "display": "TA 3019"
+    }
+  },
+  {
+    "id": "evt-battle-pelennor",
+    "slug": "battle-of-the-pelennor-fields",
+    "name": "Battle of the Pelennor Fields",
+    "eventType": "BATTLE",
+    "summary": "A great battle for Minas Tirith where the forces of Gondor and Rohan defeated Sauron's army.",
+    "timeRef": {
+      "id": "time-ta3019-b",
+      "age": "TA",
+      "year": 3019,
+      "sortKey": 30019,
+      "display": "TA 3019"
+    }
+  },
+  {
+    "id": "evt-meeting-rivendell",
+    "slug": "frodo-arrives-rivendell",
+    "name": "Frodo Arrives at Rivendell",
+    "eventType": "MEETING",
+    "summary": "Frodo Baggins arrives at Rivendell after fleeing the Nazgul.",
+    "timeRef": {
+      "id": "time-ta3018-b",
+      "age": "TA",
+      "year": 3018,
+      "sortKey": 30018,
+      "display": "TA 3018"
+    }
+  },
+  {
+    "id": "evt-gandalf-balrog",
+    "slug": "gandalf-vs-balrog",
+    "name": "Gandalf Fights the Balrog",
+    "eventType": "BATTLE",
+    "summary": "Gandalf confronts and defeats the Balrog of Moria, sacrificing himself in the process.",
+    "timeRef": {
+      "id": "time-ta3019-c",
+      "age": "TA",
+      "year": 3019,
+      "sortKey": 30019,
+      "display": "TA 3019"
+    }
+  }
+]
+

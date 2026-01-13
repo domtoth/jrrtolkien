@@ -1,0 +1,153 @@
+[
+  {
+    "id": "ent-gandalf",
+    "slug": "gandalf",
+    "name": "Gandalf",
+    "type": "CHARACTER",
+    "aliases": ["Mithrandir", "Olorin", "The Grey Pilgrim", "Gandalf the Grey", "Gandalf the White"],
+    "summary": "A wizard of the Istari order sent to Middle-earth to aid in the fight against Sauron."
+  },
+  {
+    "id": "ent-frodo",
+    "slug": "frodo-baggins",
+    "name": "Frodo Baggins",
+    "type": "CHARACTER",
+    "aliases": ["Frodo", "Mr. Frodo", "Ringbearer"],
+    "summary": "A hobbit of the Shire who undertook the quest to destroy the One Ring in Mount Doom."
+  },
+  {
+    "id": "ent-aragorn",
+    "slug": "aragorn",
+    "name": "Aragorn",
+    "type": "CHARACTER",
+    "aliases": ["Strider", "Elessar", "Aragorn II", "King Elessar"],
+    "summary": "The heir of Isildur and rightful king of Gondor and Arnor, a Ranger of the North."
+  },
+  {
+    "id": "ent-legolas",
+    "slug": "legolas",
+    "name": "Legolas",
+    "type": "CHARACTER",
+    "aliases": ["Legolas Greenleaf"],
+    "summary": "An elven prince of the Woodland Realm and member of the Fellowship of the Ring."
+  },
+  {
+    "id": "ent-gimli",
+    "slug": "gimli",
+    "name": "Gimli",
+    "type": "CHARACTER",
+    "aliases": ["Gimli son of Gloin", "Lord of the Glittering Caves"],
+    "summary": "A dwarf warrior and member of the Fellowship of the Ring."
+  },
+  {
+    "id": "ent-sam",
+    "slug": "samwise-gamgee",
+    "name": "Samwise Gamgee",
+    "type": "CHARACTER",
+    "aliases": ["Sam", "Samwise", "Mayor Samwise"],
+    "summary": "Frodo's loyal companion and gardener who accompanied him on the quest to destroy the Ring."
+  },
+  {
+    "id": "ent-bilbo",
+    "slug": "bilbo-baggins",
+    "name": "Bilbo Baggins",
+    "type": "CHARACTER",
+    "aliases": ["Bilbo"],
+    "summary": "A hobbit who found the One Ring during his adventure with Thorin's company."
+  },
+  {
+    "id": "ent-sauron",
+    "slug": "sauron",
+    "name": "Sauron",
+    "type": "CHARACTER",
+    "aliases": ["The Dark Lord", "The Enemy", "The Necromancer"],
+    "summary": "The primary antagonist, a Dark Lord who created the One Ring to dominate Middle-earth."
+  },
+  {
+    "id": "ent-saruman",
+    "slug": "saruman",
+    "name": "Saruman",
+    "type": "CHARACTER",
+    "aliases": ["Saruman the White", "Saruman of Many Colors"],
+    "summary": "The head of the Istari order who was corrupted and sought the One Ring for himself."
+  },
+  {
+    "id": "ent-gollum",
+    "slug": "gollum",
+    "name": "Gollum",
+    "type": "CHARACTER",
+    "aliases": ["Smeagol"],
+    "summary": "A corrupted creature obsessed with the One Ring, which he possessed for centuries."
+  },
+  {
+    "id": "ent-ring",
+    "slug": "the-one-ring",
+    "name": "The One Ring",
+    "type": "ARTIFACT",
+    "aliases": ["One Ring", "The Ring", "The Ruling Ring"],
+    "summary": "The most powerful Ring of Power, created by Sauron to control all other rings."
+  },
+  {
+    "id": "ent-shire",
+    "slug": "the-shire",
+    "name": "The Shire",
+    "type": "PLACE",
+    "summary": "The homeland of hobbits in northwest Middle-earth, known for its peaceful rural life."
+  },
+  {
+    "id": "ent-rivendell",
+    "slug": "rivendell",
+    "name": "Rivendell",
+    "type": "PLACE",
+    "aliases": ["Imladris"],
+    "summary": "An elven settlement in eastern Eriador, home to Elrond Half-elven."
+  },
+  {
+    "id": "ent-mordor",
+    "slug": "mordor",
+    "name": "Mordor",
+    "type": "PLACE",
+    "aliases": ["The Black Land"],
+    "summary": "Sauron's realm in the southeast of Middle-earth, where Mount Doom is located."
+  },
+  {
+    "id": "ent-gondor",
+    "slug": "gondor",
+    "name": "Gondor",
+    "type": "PLACE",
+    "aliases": ["The South Kingdom"],
+    "summary": "The southern kingdom of the Dunedain, a major realm of Men in Middle-earth."
+  },
+  {
+    "id": "ent-moria",
+    "slug": "moria",
+    "name": "Moria",
+    "type": "PLACE",
+    "aliases": ["Khazad-dum", "The Black Pit"],
+    "summary": "An ancient dwarven city and mine beneath the Misty Mountains."
+  },
+  {
+    "id": "ent-fellowship",
+    "slug": "fellowship-of-the-ring",
+    "name": "Fellowship of the Ring",
+    "type": "GROUP",
+    "summary": "A group of nine companions who set out to destroy the One Ring."
+  },
+  {
+    "id": "ent-elrond",
+    "slug": "elrond",
+    "name": "Elrond",
+    "type": "CHARACTER",
+    "aliases": ["Elrond Half-elven", "Lord Elrond"],
+    "summary": "The lord of Rivendell, a wise elf who hosted the Council that formed the Fellowship."
+  },
+  {
+    "id": "ent-mount-doom",
+    "slug": "mount-doom",
+    "name": "Mount Doom",
+    "type": "PLACE",
+    "aliases": ["Orodruin", "The Mountain of Fire"],
+    "summary": "A volcano in Mordor where the One Ring was forged and where it must be destroyed."
+  }
+]
+

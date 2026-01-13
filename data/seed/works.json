@@ -1,0 +1,30 @@
+[
+  {
+    "id": "work-lotr",
+    "slug": "the-lord-of-the-rings",
+    "title": "The Lord of the Rings",
+    "workType": "NOVEL",
+    "publicationYear": 1954,
+    "author": "J.R.R. Tolkien",
+    "summary": "An epic high-fantasy novel chronicling the quest to destroy the One Ring and defeat the Dark Lord Sauron."
+  },
+  {
+    "id": "work-hobbit",
+    "slug": "the-hobbit",
+    "title": "The Hobbit",
+    "workType": "NOVEL",
+    "publicationYear": 1937,
+    "author": "J.R.R. Tolkien",
+    "summary": "The story of Bilbo Baggins' unexpected journey with dwarves to reclaim their homeland from the dragon Smaug."
+  },
+  {
+    "id": "work-silmarillion",
+    "slug": "the-silmarillion",
+    "title": "The Silmarillion",
+    "workType": "COLLECTION",
+    "publicationYear": 1977,
+    "author": "J.R.R. Tolkien",
+    "summary": "A collection of mythopoeic stories of the First Age of Middle-earth and the creation of Arda."
+  }
+]
+
