@@ -1,4 +1,14 @@
-import 'dotenv/config';
+import { config } from 'dotenv';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// Get the directory of this file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load .env from workspace root (3 levels up from scripts/ingest/src)
+config({ path: resolve(__dirname, '../../../.env') });
+
 import { initializeNeo4j, createQueries } from 'shared';
 import { loadWorks, loadEntities, loadEvents, loadRelationships } from './loaders.js';
 import {
@@ -13,8 +23,8 @@ import { join } from 'path';
 async function initializeSchema(client: any) {
   console.log('Initializing Neo4j schema...');
 
-  // Read and execute constraints
-  const constraintsPath = join(process.cwd(), 'packages/shared/src/schema/constraints.cypher');
+  // Read and execute constraints (go up 2 levels to workspace root)
+  const constraintsPath = join(process.cwd(), '../../packages/shared/src/schema/constraints.cypher');
   const constraints = readFileSync(constraintsPath, 'utf-8')
     .split(';')
     .map((s) => s.trim())
@@ -31,8 +41,8 @@ async function initializeSchema(client: any) {
     }
   }
 
-  // Read and execute indexes
-  const indexesPath = join(process.cwd(), 'packages/shared/src/schema/indexes.cypher');
+  // Read and execute indexes (go up 2 levels to workspace root)
+  const indexesPath = join(process.cwd(), '../../packages/shared/src/schema/indexes.cypher');
   const indexes = readFileSync(indexesPath, 'utf-8')
     .split(';')
     .map((s) => s.trim())

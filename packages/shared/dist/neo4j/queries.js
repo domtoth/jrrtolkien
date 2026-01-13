@@ -19,7 +19,10 @@ class Neo4jQueries {
           e.updatedAt = datetime()
       RETURN e
     `;
-        await this.client.executeWrite(query, entity);
+        await this.client.executeWrite(query, {
+            ...entity,
+            aliases: entity.aliases || []
+        });
     }
     // Create Work node
     async createWork(work) {
